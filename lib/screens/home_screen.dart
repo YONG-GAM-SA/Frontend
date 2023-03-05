@@ -39,9 +39,6 @@ class _HomeScreenState extends State<HomeScreen> {
         if (snapshot.hasData) {
           return Column(
             children: [
-              const SizedBox(
-                height: 40,
-              ),
               Expanded(
                 child: _widgetOptions.elementAt(_selectedIndex),
               ),
@@ -53,9 +50,6 @@ class _HomeScreenState extends State<HomeScreen> {
         // );
         return Column(
           children: [
-            const SizedBox(
-              height: 40,
-            ),
             Expanded(
               child: _widgetOptions.elementAt(_selectedIndex),
             ),
