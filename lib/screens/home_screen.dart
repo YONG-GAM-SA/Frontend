@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:mapchatfe/screens/chat/chatroom_screen.dart';
 import 'package:mapchatfe/screens/mypage_screen.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -14,16 +15,13 @@ class _HomeScreenState extends State<HomeScreen> {
   int _selectedIndex = 0;
   static const TextStyle optionStyle =
       TextStyle(fontSize: 30, fontWeight: FontWeight.bold);
-  static const List<Widget> _widgetOptions = <Widget>[
-    Text(
+  static final List<Widget> _widgetOptions = <Widget>[
+    const Text(
       'Index 0: Home',
       style: optionStyle,
     ),
-    Text(
-      'Index 1: Chat',
-      style: optionStyle,
-    ),
-    MyPageScreen(),
+    ChatroomScreen(),
+    const MyPageScreen(),
   ];
   void _onItemTapped(int index) {
     setState(() {
